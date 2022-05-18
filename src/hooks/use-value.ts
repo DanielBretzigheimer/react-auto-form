@@ -6,5 +6,6 @@ export function useValue<T>(data: T, prop: keyof T): string | number {
   if (typeof value === "string") return value
   if (typeof value === "number") return value
   if (typeof value === "boolean") return value ? t("yes") : t("no")
+  if (value === null) return ""
   throw new Error(`The type ${typeof value} is not supported`)
 }

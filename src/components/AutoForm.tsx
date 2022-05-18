@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material"
 import { useEffect, useState } from "react"
 import { FieldConfig } from "../model/field-config"
-import { Input } from "./Input"
+import { FormField } from "./FormField"
 
 export type AutoFormProps<T> = {
   data: T
@@ -75,7 +75,7 @@ export function AutoForm<T>(props: AutoFormProps<T>) {
             md={props.singleColumn ? 12 : 6}
             lg={props.singleColumn ? 12 : 4}
           >
-            <Input
+            <FormField
               config={fieldConfig}
               disabled={props.disabled}
               data={props.data}

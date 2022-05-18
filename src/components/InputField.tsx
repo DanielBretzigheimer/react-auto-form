@@ -5,9 +5,9 @@ import { useValue } from "../hooks/use-value"
 import { InputConfig } from "../model/field-config"
 import { normalizeString } from "../utils/normalize-string"
 import { requiredValidation } from "../utils/validation"
-import { InputProps } from "./Input"
+import { FormFieldProps } from "./FormField"
 
-type InputFieldProps<T> = InputProps<T> & {
+type InputFieldProps<T> = FormFieldProps<T> & {
   config?: InputConfig
 }
 

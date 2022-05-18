@@ -4,7 +4,7 @@ import { DatePickerField } from "./DatePickerField"
 import { InputField } from "./InputField"
 import { SelectField } from "./SelectField"
 
-export type InputProps<T> = {
+export type FormFieldProps<T> = {
   config?: FieldConfig
   data: T
   validationData?: T
@@ -24,7 +24,7 @@ export type InputProps<T> = {
   ) => string | undefined
 }
 
-export function Input<T>(props: InputProps<T>) {
+export function FormField<T>(props: FormFieldProps<T>) {
   if (props.config?.type === "input")
     return <InputField {...props} config={props.config} />
   if (props.config?.type === "select")

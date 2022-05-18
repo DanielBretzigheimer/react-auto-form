@@ -2,9 +2,9 @@ import { Checkbox, FormControlLabel } from "@mui/material"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { normalizeString } from "../utils/normalize-string"
-import { InputProps } from "./Input"
+import { FormFieldProps } from "./FormField"
 
-export function CheckboxField<T>(props: InputProps<T>) {
+export function CheckboxField<T>(props: FormFieldProps<T>) {
   const { t } = useTranslation()
   const translationKey = normalizeString(props.field)
   const [checked, setChecked] = useState(Boolean(props.data[props.field]))

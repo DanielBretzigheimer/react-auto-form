@@ -11,10 +11,10 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { SelectConfig } from "../model/field-config"
 import { normalizeString } from "../utils/normalize-string"
-import { InputProps } from "./Input"
+import { FormFieldProps } from "./FormField"
 import { SelectText } from "./SelectText"
 
-type SelectFieldProps<T> = InputProps<T> & {
+type SelectFieldProps<T> = FormFieldProps<T> & {
   config: SelectConfig
 }
 
